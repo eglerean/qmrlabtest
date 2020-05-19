@@ -7,6 +7,6 @@ data.DiffusionData=double(load_nii_data('data/testdata.nii'));
 
 disp('>> calling FitData()')
 
-FitResults = FitData(data,Model,0);
+FitResults = myFitData(data,Model,0); % modified version just to output how much is left
 disp('>> calling FitResultsSave_nii()')
 FitResultsSave_nii(FitResults);

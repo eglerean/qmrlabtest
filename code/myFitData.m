@@ -96,11 +96,15 @@ if Model.voxelwise % process voxelwise
 
     if (isempty(h)), fprintf('Starting to fit data.\n'); end
     fitFailedCounter = 0;
+	tic
     for ii = 1:numVox
         vox = Voxels(ii);
         %% EDIT BY ENRICO
 		if(mod(ii,100)==0)
-			disp(sprintf('Fitting voxel %d/%d (%d errors)', ii, numVox, fitFailedCounter))
+			done_so_far=num2str(100*ii/numVox,2);
+			disp(sprintf('Fitting voxel %d/%d (%d errors, perc. done so far: %s)', ii, numVox, fitFailedCounter, done_so_far))
+			toc
+			tic
 		end
 		%% END EDIT BY ENRICO
         % Update waitbar

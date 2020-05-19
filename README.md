@@ -16,7 +16,7 @@ cd ..
 You can use an edited version of `FitData.m` that is under 'code/' subfolder. Check the difference with
 
 
-```diff code/FitData.m ./external/qMRLab-2.3.0/src/Common/FitData.m```
+```diff code/myFitData.m ./external/qMRLab-2.3.0/src/Common/FitData.m```
 
 
 To run test on Aalto linux:
